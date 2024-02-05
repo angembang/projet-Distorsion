@@ -21,7 +21,11 @@ class Category
         return $this->name;
     }
     
-    // Méthode setter
+    // Méthodes setters
+    public function setId(?int $id): void
+    {
+        $this->id = $id;
+    }
     public function setName(string $name): void
     {
         $this->name = $name;

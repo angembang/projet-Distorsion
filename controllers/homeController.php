@@ -2,47 +2,36 @@
 
 class HomeController
 {
-    public function index()
+    /*public function displayCategoriesAndSalons()
     {
-        // Afficher la liste des catégories, salons, et messages
-        //  utiliser les gestionnaires de modèle pour récupérer les données nécessaires
-       
+        // Utilisez CategoryManager pour récupérer les catégories
+        $categoryManager = new CategoryManager();
+        $categories = $categoryManager->getCategories();
 
+        // Utilisez SalonManager pour récupérer les salons
+        $salonManager = new SalonManager();
+        $salons = $salonManager->getSalonsByCategory(1);
+
+        // Affichez la liste des catégories et des salons
+        return ["categories" => $categories, "salons" => $salons];
+    }
+
+
+
+    public function displayMessages($salonId)
+    {
+        // Utilisez MessageManager pour récupérer les messages du salon spécifié
+        $messageManager = new MessageManager();
+        $messages = $messageManager->getMessagesBySalon($salonId);
         
-     
-
-        // Appeler la vue correspondante 
-
+        // Affichez les messages
+        return ['messages' => $messages];
     }
 
-    public function createCategory()
+    public function sendMessage($salonId, $content)
     {
-        // Traiter la création d'une nouvelle catégorie
-        // utiliser le gestionnaire de modèle pour ajouter la catégorie à la base de données
-      
-
-        // Rediriger l'utilisateur vers la page d'accueil après la création de la catégorie
-        // header('Location: /home/index');
-        // exit();
-    }
-
-    public function createChannel()
-    {
-        // Traiter la création d'un nouveau salon dans une catégorie
-        // ...
-
-        // Rediriger l'utilisateur vers la page d'accueil après la création du salon
-        // header('Location: /home/index');
-        // exit();
-    }
-
-    public function sendMessage()
-    {
-        // Traiter l'envoi d'un nouveau message dans un salon
-        
-
-        // Rediriger l'utilisateur vers la page d'accueil après l'envoi du message
-        // header('Location: /home/index');
-        // exit();
-    }
+        // Utilisez MessageManager pour envoyer un message dans le salon spécifié
+        $messageManager = new MessageManager();
+        $messageManager->sendMessage($salonId, $content);
+    }*/
 }

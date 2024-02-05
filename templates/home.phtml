@@ -1,0 +1,9 @@
+<main>
+    <!-- Afficher les catégories -->
+    <h2>Catégories</h2>
+    <ul>
+        <?php foreach ($categories as $category) { ?>
+            <li><?= $category->getName(); ?></li>
+        <?php } ?>
+    </ul>
+</main>
